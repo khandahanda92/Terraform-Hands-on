@@ -1,9 +1,9 @@
 provider "aws" {
     access_key = ""
-    secret_key = " "
+    secret_key = ""
     region     = "us-east-2"
 }
-resource "aws_instance" "first instance" {
-  ami           = "ami-05d72852800cbf29e"
+resource "aws_instance" "firstmachine" {
+  ami           = "ami-00399ec92321828f5"
   instance_type = "t2.micro"
 }
