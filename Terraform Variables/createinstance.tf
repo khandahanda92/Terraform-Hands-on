@@ -5,4 +5,8 @@ resource "aws_instance" "firstmachine" {
   tags = {
     Name = "demoinstance"
   }
+
+  security_groups = "${var.Security_Group}"
+  # define the list of security group of instances in aws
 }
+
