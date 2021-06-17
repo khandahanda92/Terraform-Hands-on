@@ -9,8 +9,8 @@ services = ["ec2"] # on which services we want this ip filter
 
 resource "aws_security_group" "sg-custom_us_east" { # security group name 
   name  = "sg-custom_us_east"
-
-  ingress {
+    
+    ingress {
       from_port = "443" # From which port you want to accept the traffic 
       to_port = "443" # to send on which port 
       protocol = "tcp"
@@ -18,7 +18,7 @@ resource "aws_security_group" "sg-custom_us_east" { # security group name
   }
 
    tags = {
-        Createdate = data.aws_ip_range.us_east_ip_range.create_date # date for the security group 
-        SyncToken = data.aws_ip_range.us_east_ip_range.sync_token 
+        CreateDate = data.aws_ip_ranges.us_east_ip_range.create_date # date for the security group 
+        SyncToken = data.aws_ip_ranges.us_east_ip_range.sync_token
     }
 }
