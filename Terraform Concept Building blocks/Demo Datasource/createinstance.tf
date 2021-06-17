@@ -29,7 +29,7 @@ resource "aws_instance" "MyFirstInstnace" {
 
 
   provisioner "local-exec" {
-    command = "echo aws_instance.MyFirstInstnace.private_ip >> my_private_ip.txt"
+    command = "echo ${aws_instance.MyFirstInstnace.private_ip} >> my_private_ip.txt"
     # Here we are running this to get the private ip 
 
   }
