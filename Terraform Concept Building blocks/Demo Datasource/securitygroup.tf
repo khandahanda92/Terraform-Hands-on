@@ -8,7 +8,7 @@ services = ["ec2"] # on which services we want this ip filter
 }
 
 resource "aws_security_group" "sg-custom" { # security group name 
-  name  = "sg-custom_us_east"
+  name  = "sg-custom"
     
     ingress {
       from_port = "443" # From which port you want to accept the traffic 
