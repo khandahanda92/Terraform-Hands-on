@@ -1,6 +1,6 @@
 ## Create security group on the basis of region filter 
 data "aws_ip_ranges" "us_east_ip_range" { # aws_ip_range is variable 
-region = ["us-east-1","us-east-2"] # definning on which region we want the ip filter
+regions = ["us-east-1","us-east-2"] # definning on which region we want the ip filter
 services = ["ec2"] # on which services we want this ip filter 
 
 # Datasource for aws_ip_ranges for us_east1 & 2 
