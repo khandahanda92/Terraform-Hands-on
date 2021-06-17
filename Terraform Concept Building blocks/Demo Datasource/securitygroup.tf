@@ -7,7 +7,7 @@ services = ["ec2"] # on which services we want this ip filter
 
 }
 
-resource "aws_security_group" "sg-custom_us_east" { # security group name 
+resource "aws_security_group" "sg-custom" { # security group name 
   name  = "sg-custom_us_east"
     
     ingress {
