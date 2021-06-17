@@ -39,7 +39,7 @@ resource "aws_instance" "MyFirstInstnace" {
     Name = "custom_instance"
   }
 
-  output "public_ip" {
+output "public_ip" {
     value = aws_instance.MyFirstInstnace.public_ip # This wil desplay the public ip of your machine on console 
   }
 }
