@@ -28,7 +28,7 @@ resource "aws_subnet" "levelupvpc-public-1" { # name of subnet
 }
 
 resource "aws_subnet" "levelupvpc-public-2" {
-  vpc_id                  = aws_vpc.levelupvpc.id
+  vpc_id                  = "aws_vpc.levelupvpc.id"
   cidr_block              = "10.0.2.0/24" # CIDR block should be different 
   map_public_ip_on_launch = "true"
   availability_zone       = "us-east-2b"
@@ -39,7 +39,7 @@ resource "aws_subnet" "levelupvpc-public-2" {
 }
 
 resource "aws_subnet" "levelupvpc-public-3" {
-  vpc_id                  = aws_vpc.levelupvpc.id
+  vpc_id                  = "aws_vpc.levelupvpc.id"
   cidr_block              = "10.0.3.0/24"
   map_public_ip_on_launch = "true"
   availability_zone       = "us-east-2c"
@@ -52,7 +52,7 @@ resource "aws_subnet" "levelupvpc-public-3" {
 
 #  3  Private Subnets in Custom VPC
 resource "aws_subnet" "levelupvpc-private-1" { # name of subnet 
-  vpc_id                  = aws_vpc.levelupvpc.id
+  vpc_id                  = "aws_vpc.levelupvpc.id"
   cidr_block              = "10.0.4.0/24"
   map_public_ip_on_launch = "false"  
   # means the instance is launced in this vpc by no  the public ip is associated 
@@ -64,7 +64,7 @@ resource "aws_subnet" "levelupvpc-private-1" { # name of subnet
 }
 
 resource "aws_subnet" "levelupvpc-private-2" {
-  vpc_id                  = aws_vpc.levelupvpc.id
+  vpc_id                  = "aws_vpc.levelupvpc.id"
   cidr_block              = "10.0.5.0/24" # CIDR block should be different 
   map_public_ip_on_launch = "false"
   availability_zone       = "us-east-2b"
@@ -75,7 +75,7 @@ resource "aws_subnet" "levelupvpc-private-2" {
 }
 
 resource "aws_subnet" "levelupvpc-private-3" {
-  vpc_id                  = aws_vpc.levelupvpc.id
+  vpc_id                  = "aws_vpc.levelupvpc.id"
   cidr_block              = "10.0.6.0/24"
   map_public_ip_on_launch = "false"
   availability_zone       = "us-east-2c"
@@ -87,7 +87,7 @@ resource "aws_subnet" "levelupvpc-private-3" {
 
 # Custom internet Gateway
 resource "aws_internet_gateway" "levelup-gw" { # gateway name 
-  vpc_id = aws_vpc.levelupvpc.id
+  vpc_id = "aws_vpc.levelupvpc.id"
 # Defining the VPN id on which its applicable 
   tags = {
     Name = "levelup-gw"
@@ -96,7 +96,7 @@ resource "aws_internet_gateway" "levelup-gw" { # gateway name
 
 #Routing Table for the Custom VPC
 resource "aws_route_table" "levelup-public" { # name of route table 
-  vpc_id = aws_vpc.levelupvpc.id
+  vpc_id = "aws_vpc.levelupvpc.id"
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.levelup-gw.id
