@@ -17,7 +17,7 @@ resource "aws_nat_gateway" "levelup-nat-gw" { # name of nat gateway
 # Meas the machine which are present on internet cannot access machine of my project 
 # Although my aws machines can acess the internet but the reverse traffic will not be allowed 
 resource "aws_route_table" "levelup-private" { # name of my route table 
-  vpc_id = aws_vpc.levelupvpc.id
+  vpc_id = "aws_vpc.levelupvpc.id"
   route {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.levelup-nat-gw.id
