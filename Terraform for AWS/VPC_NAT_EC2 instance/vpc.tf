@@ -1,4 +1,4 @@
-resource "aws_vpc" "levelup_vpc" { # name of vpc 
+resource "aws_vpc" "levelupvpc" { # name of vpc 
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default" 
 # More than one instance can be spin on more than one hardware  otherwise it will spin on sperate hardware & costly 
