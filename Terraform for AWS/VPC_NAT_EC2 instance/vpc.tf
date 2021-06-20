@@ -1,9 +1,7 @@
-## Create AWS VPC
-
 resource "aws_vpc" "levelup_vpc" { # name of vpc 
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default" 
-   # More than one instance can be spin on more than one hardware  otherwise it will spin on sperate hardware & costly 
+# More than one instance can be spin on more than one hardware  otherwise it will spin on sperate hardware & costly 
   enable_dns_support   = "true"
   enable_dns_hostnames = "true"
   # create hostname and dns of your internal instance name 
