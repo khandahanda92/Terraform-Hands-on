@@ -27,7 +27,6 @@ resource "aws_subnet" "levelupvpc-public-1" { # name of subnet
   }
 }
 
-
 resource "aws_subnet" "levelupvpc-public-2" {
   vpc_id                  = aws_vpc.levelupvpc.id
   cidr_block              = "10.0.2.0/24" # CIDR block should be different 
@@ -89,7 +88,6 @@ resource "aws_subnet" "levelupvpc-private-3" {
 # Custom internet Gateway
 resource "aws_internet_gateway" "levelup-gw" { # gateway name 
   vpc_id = aws_vpc.levelupvpc.id
-
 # Defining the VPN id on which its applicable 
   tags = {
     Name = "levelup-gw"
