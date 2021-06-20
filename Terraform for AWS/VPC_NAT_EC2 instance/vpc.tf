@@ -16,7 +16,7 @@ resource "aws_vpc" "levelup_vpc" { # name of vpc
 
 #  3 Public Subnets in Custom VPC
 resource "aws_subnet" "levelupvpc-public-1" { # name of subnet 
-  vpc_id                  = aws_vpc.levelupvpc.id
+  vpc_id                  = "aws_vpc.levelupvpc.id"
   cidr_block              = "10.0.1.0/24"
   map_public_ip_on_launch = "true"  
   # means the instance is launced in this vpc by deafult the public ip is associated 
