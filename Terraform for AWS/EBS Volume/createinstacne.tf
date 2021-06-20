@@ -18,7 +18,7 @@ resource "aws_instance" "MyFirstInstnace" {
 
 #EBS resource Creation
 resource "aws_ebs_volume" "ebs-volume-1" { # name of EBS volume 
-  availability_zone = "us-east-2a" # defining the region 
+  availability_zone = "us-east-2b"# defining the region 
   size              = 50  # size in gb 
   type              = "gp2"
 
