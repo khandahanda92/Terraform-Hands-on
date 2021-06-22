@@ -1,8 +1,8 @@
 #Roles to access the AWS S3 Bucket
 resource "aws_iam_role" "s3-levelupbucket-role" { # here we are defining the roles 
   name               = "s3-levelupbucket-role" # name of the role 
-  assume_role_policy = <<EOF 
-{
+  assume_role_policy = jsonencode({
+
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -13,12 +13,11 @@ resource "aws_iam_role" "s3-levelupbucket-role" { # here we are defining the rol
       "Effect": "Allow",
       "Sid": ""
     }
-  ]
-}
-EOF
+      },
+    ]
+}  
 
 
-}
 #The above role is defining for tje service ec2 
 
 #Policy to attach the S3 Bucket Role
