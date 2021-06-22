@@ -16,9 +16,10 @@ resource "aws_iam_role" "s3-levelupbucket-role" { # here we are defining the rol
   ]
 }
 EOF
-#The above role is defining for tje service ec2 
+
 
 }
+#The above role is defining for tje service ec2 
 
 #Policy to attach the S3 Bucket Role
 resource "aws_iam_role_policy" "s3-levelupmybucket-role-policy" {
