@@ -16,7 +16,7 @@ resource "aws_key_pair" "levelup_key" {
 #Autoscaling Group
 resource "aws_autoscaling_group" "levelup-autoscaling" {
   name                      = "levelup-autoscaling"
-  vpc_zone_identifier     = ["us-east-2b"] # in which zone the instance can be created 
+  vpc_zone_identifier     = ["subnet-6eb70205" , "subnet-8721c2fa"] # in which zone the instance can be created 
   launch_configuration      = aws_launch_configuration.levelup-launchconfig.name
   min_size                  = 1 # at least one is ec2 instance is there 
   max_size                  = 2 
