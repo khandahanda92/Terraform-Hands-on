@@ -10,7 +10,7 @@ module "ec2_cluster" {
     name            = "my-cluster"
     ami             = "ami-05692172625678b4e"
     instance_type   = "t2.micro"
-    subnet_id       = "subnet-f30171bf"
+    subnet_id       = "subnet-6eb70205"
     instance_count  = var.environment == "Production" ? 2 : 1 # It mean if env in production then we need to spin up
     # two instances othereise spin up one instance 
 
