@@ -20,7 +20,7 @@ resource "aws_elb" "levelup-elb" {
     target              = "HTTP:80/"
     interval            = 30
 # it means after each 30 seconds this health check will triger on port 80 by http portocol 
-# Timeout of heaktch will be 3 sec and will mark the healthy node after two consecutive sucess and mark it 
+# Timeout of health  will be 3 sec and will mark the healthy node after two consecutive sucess and mark it 
 # unhealthy after two consecutive failures 
   }
 
