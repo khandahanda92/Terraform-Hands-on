@@ -6,7 +6,7 @@ variable "region" {
 
 variable "public_key_path" {
   description = "Public key path"
-  default = "/.ssh/levelup_key.pub"
+  default = "root/.ssh/levelup_key.pub"
 }
 
 variable "instance_ami" {
