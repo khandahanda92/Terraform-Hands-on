@@ -1,5 +1,5 @@
 module "dev-qa-vpc"{
-    source                          = "../../custom_vpc" # is the source of the modules 
+    source                          = "../../Custom VPC" # is the source of the modules 
 
     vpcname                         = "dev02-qa-vpc"
     cidr                            = "10.0.1.0/24"
