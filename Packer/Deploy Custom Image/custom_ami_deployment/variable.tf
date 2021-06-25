@@ -1,7 +1,7 @@
 # Variable for Create Instance Module
 variable "public_key_path" {
   description = "Public key path"
-  default = "root/.ssh/levelup_key.pub"
+  default = "/root/.ssh/levelup_key.pub"
 }
 
 variable "ENVIRONMENT" {
