@@ -19,6 +19,7 @@ resource "aws_iam_group_membership" "admin-users" {
   users = [
     aws_iam_user.adminuser1.name,
     aws_iam_user.adminuser2.name,
+    
 # Defining the list of users which i want to keep in this group membership 
   ]
   group = aws_iam_group.admingroup.name  # this is the group name in which these users are assigned 
