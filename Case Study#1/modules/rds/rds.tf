@@ -13,8 +13,8 @@ resource "aws_db_subnet_group" "levelup-rds-subnet-group" {
     name          = "${var.ENVIRONMENT}-levelup-db-snet"
     description   = "Allowed subnets for DB cluster instances"
     subnet_ids    = [
-      "${module.levelup-vpc.levelup_vpc_private_subnet_1.id}",    # defining both the private subnet and i am taking it with the modules
-      "${module.levelup-vpc.levelup_vpc_private_subnet_2.id}",
+      "${module.levelup-vpc.private_subnet1_id}",    # defining both the private subnet and i am taking it with the modules
+      "${module.levelup-vpc.private_subnet2_id}",
     ]
     tags = {
         Name         = "${var.ENVIRONMENT}_levelup_db_subnet"
