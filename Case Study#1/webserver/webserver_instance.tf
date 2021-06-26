@@ -1,12 +1,12 @@
 module "levelup-vpc" {
-    source      = "../module/vpc"
+    source      = "../modules/vpc"
 
     ENVIRONMENT = var.ENVIRONMENT
     AWS_REGION  = var.AWS_REGION
 }
 
 module "levelup-rds" {
-    source      = "../module/rds"
+    source      = "../modules/rds"
 
     ENVIRONMENT = var.ENVIRONMENT
     AWS_REGION  = var.AWS_REGION
