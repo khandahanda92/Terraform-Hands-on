@@ -85,7 +85,7 @@ resource "aws_autoscaling_group" "levelup_webserver" {
   desired_capacity          = 1
   force_delete              = true
   launch_configuration      = aws_launch_configuration.launch_config_webserver.name
-  vpc_zone_identifier       = ["${module.levelup-vpc.levelup_vpc_public_subnet_1.id}", "${module.levelup-vpc.levelup_vpc_public_subnet_2.id}"]
+  vpc_zone_identifier       = ["${module.levelup-vpc_public_subnet_1.id}", "${module.levelup-vpc_public_subnet_2.id}"]
   target_group_arns         = [aws_lb_target_group.load-balancer-target-group.arn] # from the alb.tf file
 }
 
