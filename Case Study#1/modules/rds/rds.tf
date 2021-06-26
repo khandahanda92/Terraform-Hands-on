@@ -29,7 +29,7 @@ resource "aws_security_group" "levelup-rds-sg" {
   vpc_id      = module.levelup-vpc.my_vpc_id
 
   ingress {
-    from_port = 3306b # will accept and forward the traffic to 3306
+    from_port = 3306 # will accept and forward the traffic to 3306
     to_port = 3306
     protocol = "tcp"
     cidr_blocks = ["${var.RDS_CIDR}"]
